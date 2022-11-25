@@ -15,9 +15,11 @@ Steps to run
     - Run npm install
     - Run npm start
 
-Concept: CodeBucks Projects (https://github.com/codebucks27/)
-Design in : https://www.figma.com/
-Svg Icons (Social Media Icons) :https://fontawesome.com/
-Atom Icon: https://icons8.com/
-Rocket Science Icon: https://thenounproject.com/ (By Dan Hetteix)
-Audio: Benjamin Tissot (also known as Bensound)
+Credits
+
+    - Concept: CodeBucks Projects (https://github.com/codebucks27/)
+    - Design in : https://www.figma.com/
+    - Svg Icons (Social Media Icons) :https://fontawesome.com/
+    - Atom Icon: https://icons8.com/
+    - Rocket Science Icon: https://thenounproject.com/ (By Dan Hetteix)
+    - Audio: Benjamin Tissot (also known as Bensound)
