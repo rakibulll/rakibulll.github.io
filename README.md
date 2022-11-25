@@ -1,4 +1,4 @@
-# Portfolio Website
+# Portfolio Website with React JS using Styled-Components and framer-motion for Animations
 
 Folder Structure:
 
@@ -23,3 +23,5 @@ Credits
     - Atom Icon: https://icons8.com/
     - Rocket Science Icon: https://thenounproject.com/ (By Dan Hetteix)
     - Audio: Benjamin Tissot (also known as Bensound)
+    
+    This project was bootstrapped with Create React App (https://github.com/facebook/create-react-app).
