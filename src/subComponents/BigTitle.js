@@ -1,0 +1,28 @@
+import styled from "styled-components";
+import "@fontsource/press-start-2p"; // Defaults to weight 400.
+
+const Text = styled.h1`
+  pointer-events: none; /* Add this line to make the text unclickable */
+  position: fixed;
+  font-family: "Press Start 2P";
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  right: ${(props) => props.right};
+  color: ${(props) => `rgba(${props.theme.textRgba}, 0.1)`};
+  font-size: calc(3rem + 5vw);
+  z-index: 0;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;
+
+const BigTitle = (props) => {
+  return (
+    <Text top={props.top} left={props.left} right={props.right}>
+      {props.text}
+    </Text>
+  );
+};
+
+export default BigTitle;

@@ -1,0 +1,57 @@
+{
+  "homepage": "https://rakibulll.github.io",
+  "name": "react-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/anonymous-pro": "^4.5.2",
+    "@fontsource/cedarville-cursive": "^4.5.3",
+    "@fontsource/fira-code": "^4.5.5",
+    "@fontsource/press-start-2p": "^4.5.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "framer-motion": "^4.1.17",
+    "locomotive-scroll": "^4.1.1",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-gif-player": "^0.4.2",
+    "react-particles-js": "^3.5.3",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.0",
+    "tsparticles": "^1.30.4",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
