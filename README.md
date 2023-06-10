@@ -9,14 +9,14 @@ Folder Structure:
     - globalStyles.js => contains global styles for whole application
 
 
-Steps to run
+Steps to run:
 
     - Make sure to open this directory in Terminal / CMD
     - Run npm install
     - Run npm start
 
 
-Resources
+Resources:
 
 - Concept: CodeBucks Projects (https://github.com/codebucks27/)
 - Design in : https://www.figma.com/
