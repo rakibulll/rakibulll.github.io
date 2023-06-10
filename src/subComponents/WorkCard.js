@@ -16,12 +16,14 @@ const Box = styled(motion.li)`
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.body};
-
   transition: all 0.2s ease;
-  &:hover {
-    background-color: ${(props) => props.theme.text};
-    color: white;
-    border: 3px solid white;
+  
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background-color: ${(props) => props.theme.text};
+      color: white;
+      border: 3px solid white;
+    }
   }
 
   ${mediaQueries(50)`
@@ -62,8 +64,10 @@ const Description = styled.h4`
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
 
-  ${Box}:hover & {
-    border-bottom: 2px solid ${props => props.theme.icon};
+  @media screen and (min-width: 768px) {
+    ${Box}:hover & {
+      border-bottom: 2px solid ${props => props.theme.icon};
+    }
   }
 
   ${mediaQueries(25)`
@@ -118,7 +122,6 @@ const Footer = styled.footer`
 
 `};
 `;
-
 const Link = styled(NavLink)`
   background-color: ${(props) => props.theme.text};
   color: white;
@@ -127,9 +130,11 @@ const Link = styled(NavLink)`
   width: 100%;
   text-align: center;
 
-  ${Box}:hover & {
-    background-color: white;
-    color: ${(props) => props.theme.text};
+  @media screen and (min-width: 768px) {
+    ${Box}:hover & {
+      background-color: white;
+      color: ${(props) => props.theme.text};
+    }
   }
 `;
 

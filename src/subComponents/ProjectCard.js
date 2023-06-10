@@ -21,10 +21,13 @@ const Box = styled(motion.li)`
   border: 1px solid ${(props) => props.theme.text};
 
   transition: all 0.2s ease;
-  &:hover {
-    background-color: ${(props) => props.theme.text};
-    color: white;
-    border: 3px solid white;
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background-color: ${(props) => props.theme.text};
+      color: white;
+      border: 3px solid white;
+    }
   }
 
   ${mediaQueries(50)`
@@ -93,8 +96,10 @@ font-family: "Anonymous Pro";
   padding-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  ${Box}:hover & {
-    border-top: 2px solid ${(props) => props.theme.icon};
+  @media screen and (min-width: 768px) {
+    ${Box}:hover & {
+      border-top: 2px solid ${(props) => props.theme.icon};
+    }
   }
 `;
 const Tag = styled.span`
@@ -118,12 +123,15 @@ const Git = styled(NavLink)`
   color: inherit;
   text-decoration: none;
 
-  ${Box}:hover & {
-    & > * {
-      fill: white;
+  @media screen and (min-width: 768px) {
+    ${Box}:hover & {
+      & > * {
+        fill: white;
+      }
     }
   }
 `;
+
 
 const item = {
   hidden: { scale: 0 },
