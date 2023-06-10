@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Github, Programming1 } from "../components/AllSvgs";
+import { Github } from "../components/AllSvgs";
 import { lightTheme, mediaQueries } from "../components/Themes";
 
 // import "@fontsource/anonymous-pro" // Defaults to weight 400.
@@ -113,19 +113,7 @@ const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
 `;
-const Link = styled(NavLink)`
-  background-color: ${(props) => props.theme.text};
-  color: ${(props) => props.theme.icon};
-  text-decoration: none;
-  padding: 0.5rem calc(2rem + 2vw);
-  border-radius: 0 0 0 50px;
-  font-size: calc(1em + 0.5vw);
 
-  ${Box}:hover & {
-    background-color: ${(props) => props.theme.icon};
-    color: ${(props) => props.theme.body};
-  }
-`;
 const Git = styled(NavLink)`
   color: inherit;
   text-decoration: none;
@@ -141,9 +129,9 @@ const item = {
   hidden: { scale: 0 },
   show: { scale: 1, transition: { type: "spring", duration: 0.5 } },
 };
-//const tags = ["react","gsap","javascript"]
+
 const Card = (props) => {
-  const { id, name, description, tags, demo, github } = props.data;
+  const { id, name, description, tags, github } = props.data;
   return (
     <Box key={id} variants={item}>
       <Title>{name}</Title>

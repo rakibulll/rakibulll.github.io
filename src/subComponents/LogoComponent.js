@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DarkTheme, mediaQueries } from "../components/Themes";
+import { mediaQueries } from "../components/Themes";
 import { NavLink } from "react-router-dom";
 import "@fontsource/press-start-2p";
 

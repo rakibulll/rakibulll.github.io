@@ -1,4 +1,4 @@
-import styled, { keyframes, ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import { lazy, Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -70,7 +70,7 @@ const container = {
 };
 
 const Involvements = () => {
-  const [number, setNumber] = useState(0);
+  const [, setNumber] = useState(0);
 
   useEffect(() => {
     let num = (window.innerHeight - 70) / 30;

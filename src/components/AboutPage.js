@@ -167,7 +167,7 @@ const AboutPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}>
             <div>
-              <img src={profile} height={200} alt="Image" style={{ display: 'block', margin: '0 auto' }}/> {/* Add the image here */}
+              <img src={profile} height={200} alt="Rakibul-Headshot_B&W" style={{ display: 'block', margin: '0 auto' }}/> {/* Add the image here */}
             </div>
             <div>
               Hi there! I'm Rakibul Hassan, a computer science enthusiast with a knack for code, collaboration, and creation. Immersed in the world of software architecture, web innovation, and machine learning, I thrive on turning complex problems into elegantly crafted solutions.

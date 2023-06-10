@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Github } from "../components/AllSvgs";
 import { mediaQueries } from "../components/Themes";
 import "@fontsource/anonymous-pro" // Defaults to weight 400.
 import React from 'react';
@@ -107,24 +106,8 @@ const Description3 = styled.h4`
     font-size: calc(0.6em + 0.3vw);
   `}
 `;
-const Tags = styled.div`
-  padding-top: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  ${Box}:hover & {
-    border-top: 2px solid ${(props) => props.theme.icon};
-  }
-`;
-const Tag = styled.span`
-  margin-right: 1rem;
-  font-size: calc(0.8em + 0.3vw);
-
-  ${mediaQueries(25)`
-  font-size:calc(0.7em);
 
 
-  `};
-`;
 const Footer = styled.footer`
   display: flex;
   justify-content: space-evenly;
@@ -149,17 +132,6 @@ const Link = styled(NavLink)`
     color: ${(props) => props.theme.text};
   }
 `;
-const Git = styled(NavLink)`
-  color: inherit;
-  text-decoration: none;
-
-  ${Box}:hover & {
-    & > * {
-      fill: ${(props) => props.theme.icon};
-    }
-  }
-`;
-
 
 const Header = styled.div`
   display: flex;
@@ -182,7 +154,7 @@ const item = {
   
 };
 const Card = (props) => {
-  const { id, name, employer, description, additional, period, site, github } = props.data;
+  const { id, name, employer, description, additional, period, site } = props.data;
 
   return (
     <Box key={id} variants={item}>
