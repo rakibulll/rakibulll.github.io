@@ -27,8 +27,8 @@ Your application will be running on `http://localhost:3000` (or a port of your c
 ## Resources and Credits
 
 - **Concept:** CodeBucks Projects [GitHub](https://github.com/codebucks27/)
-- **Design:** Created in [Figma](https://www.figma.com/)- 
-- **SVG Icons (Social Media Icons):** [Font Awesome](https://fontawesome.com/)- 
+- **Design:** Created in [Figma](https://www.figma.com/)
+- **SVG Icons (Social Media Icons):** [Font Awesome](https://fontawesome.com/)
 - **Atom Icon:** [Icons8](https://icons8.com/)
 - **Rocket Science Icon:** Provided by Dan Hetteix at [The Noun Project](https://thenounproject.com/)
 - **Audio:** Benjamin Tissot (also known as [Bensound](https://www.bensound.com/))
