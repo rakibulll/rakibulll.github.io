@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { mediaQueries } from "../components/Themes";
-import "@fontsource/anonymous-pro" // Defaults to weight 400.
 import React from 'react';
 
 const Box = styled(motion.li)`
@@ -52,12 +51,12 @@ const Box = styled(motion.li)`
 
 const Title = styled.h4`
   font-size: calc(1em + 0.6vw);
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
 
 
 `;
 const Description = styled.h4`
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
   font-size: calc(0.8em + 0.1vw);
   font-weight: 500;
   border-bottom: 2px solid ${props => props.theme.body};
@@ -80,7 +79,7 @@ const Description = styled.h4`
 `;
 
 const Description2 = styled.h4`
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
   font-size: calc(0.8em + 0.3vw);
   font-weight: 500;
   padding-top: 0.5rem;
@@ -96,7 +95,7 @@ const Description2 = styled.h4`
 `;
 
 const Description3 = styled.h4`
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
   font-size: calc(0.8em + 0.1vw);
   font-weight: 500;
   padding-bottom: 1.5rem;
@@ -129,6 +128,7 @@ const Link = styled(NavLink)`
   padding: 0.5rem calc(2rem + 2vw);
   width: 100%;
   text-align: center;
+  font-family: "Karla";
 
   @media screen and (min-width: 768px) {
     ${Box}:hover & {

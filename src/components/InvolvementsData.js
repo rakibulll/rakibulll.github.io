@@ -22,7 +22,7 @@ export const Involvements = [
         name:"Core Board Member / Treasurer | Machine Learning Club @SVSU",
         tags:["Machine Learning","CNN/DNN","Leadership"],
         date:"April 2022 - Present",
-        imgSrcs: [rppg,yolov5],  // An array of images
+        imgSrcs: [yolov5],  // An array of images
         // link:""
     },
     {
@@ -38,7 +38,7 @@ export const Involvements = [
         name:"Senior Member | Robotics Team @SVSU",
         tags:["opensource-development","OpenCV","C++"],
         date:"Feb 2019 – Present",
-        imgSrcs: [board, robotics2],  // An array of images
+        imgSrcs: [rppg],  // An array of images
         // link:"
     },
     {

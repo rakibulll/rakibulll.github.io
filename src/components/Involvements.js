@@ -13,8 +13,6 @@ const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
 const BigTitle = lazy(() => import("../subComponents/BigTitle"));
 
 const MainContainer = styled(motion.div)`
-  // background-color: ${(props) => props.theme.text};
-
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -23,8 +21,6 @@ const MainContainer = styled(motion.div)`
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.text};
-
-  //width:100vw;
   width: 100%;
   height: auto;
   position: relative;
@@ -39,22 +35,16 @@ const Center = styled.div`
 
   ${mediaQueries(30)`
     padding-top: 7rem;
-    
-  
   `};
 `;
 
 const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
-
   grid-gap: calc(1rem + 2vw);
 
   ${mediaQueries(50)`
     grid-template-columns: 100%;
-
-    
-  
   `};
 `;
 
@@ -76,35 +66,37 @@ const Involvements = () => {
     let num = (window.innerHeight - 70) / 30;
     setNumber(parseInt(num));
   }, []);
+
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <ThemeProvider theme={lightTheme}>
+      <Suspense fallback={<Loading />} >
+        <MainContainer 
+          variants={container}
+          initial="hidden"
+          animate="show"
+          exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        >
+          <Container>
+            <LogoComponent />
+            <SocialIcons />
+            <BigTitle text="Involvements" top="5rem" left="5rem" />
 
-    <Suspense fallback={<Loading />} >
-      <MainContainer 
-        variants={container}
-        initial="hidden"
-        animate="show"
-        exit={{ opacity: 0, transition: { duration: 0.5 } }}
-      >
-        <Container>
-          <LogoComponent />
-
-
-          <SocialIcons />
-          {/* <AnchorComponent number={number} /> */}
-          <BigTitle text="Involvements" top="5rem" left="5rem"/>
-
-          <Center>
-            <Grid variants={container} initial="hidden" animate="show">
-              {involvementsData.map((involvements) => (
-                <BlogComponent key={involvements.id} involvements={involvements} />
-              ))}
-            </Grid>
-          </Center>
-
-        </Container>
-      </MainContainer>
-    </Suspense>
+            <Center>
+              <Grid variants={container} initial="hidden" animate="show">
+                {involvementsData.map((involvements) => (
+                  <BlogComponent
+                    key={involvements.id}
+                    involvements={involvements}
+                    isMobile={isMobile}
+                  />
+                ))}
+              </Grid>
+            </Center>
+          </Container>
+        </MainContainer>
+      </Suspense>
     </ThemeProvider>
   );
 };

@@ -68,13 +68,13 @@ const Box = styled(motion.li)`
 
 const Title = styled.h2`
   font-size: calc(1em + 0.5vw);
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
 
 `;
 const Description = styled.h4`
   font-size: calc(0.8em + 0.3vw);
 
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
   font-weight: 500;
   ${mediaQueries(25)`
   font-size:calc(0.7em + 0.3vw);
@@ -90,7 +90,7 @@ const Description = styled.h4`
   `};
 `;
 const Tags = styled.div`
-font-family: "Anonymous Pro";
+font-family: "Karla";
 
   border-top: 2px solid ${(props) => props.theme.text};
   padding-top: 0.5rem;
@@ -103,7 +103,7 @@ font-family: "Anonymous Pro";
   }
 `;
 const Tag = styled.span`
-font-family: "Anonymous Pro";
+font-family: "Karla";
 
   margin-right: 1rem;
   font-size: calc(0.8em + 0.3vw);
