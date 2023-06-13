@@ -146,7 +146,6 @@ const item = {
 
 const BlogComponent = (props) => {
   const { name, tags, date, imgSrcs } = props.involvements;
-  const isMobile = window.innerWidth <= 768;
 
   return (
     <Container variants={item}>

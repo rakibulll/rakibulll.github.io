@@ -110,7 +110,7 @@ const Main = styled(motion.div)`
   position: absolute;
   left: calc(5rem + 5vw);
   top: 10.5rem;
-  font-family: "Anonymous Pro";
+  font-family: "Karla";
   ${mediaQueries(40)`
           width: 60vw;
           height: auto;

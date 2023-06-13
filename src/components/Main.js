@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 import { lazy, Suspense, useState } from "react";
 import { motion } from "framer-motion";
 import resumePDF from "../assets/files/Rakibul_Hassan-Resume.pdf";
@@ -95,7 +96,7 @@ const ClickMe = styled.text`
   font-size: 10px;
   text-decoration: none;
 
-`
+`;
 
 const DownloadResume = styled(NavLink)`
 color: #E0E1DD;
@@ -110,8 +111,8 @@ position: absolute;
 const WORK = styled(NavLink)`
 color: #E0E1DD;
 position: absolute;
-  top: 50%;
-  right: calc(1rem + 2vw);
+  top: 60%;
+  right: calc(-2rem + -1.2vw);
   transform: rotate(90deg) translate(-50%, -50%);
   z-index: 1;
 
@@ -194,6 +195,15 @@ const Main = () => {
   };
   const mq = window.matchMedia("(max-width: 50em)").matches;
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      handleClick();
+    }, 800); // Change the delay to whatever you see fit
+
+    // Clean up function
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <Suspense fallback={<Loading />}>
       <MainContainer
@@ -229,7 +239,7 @@ const Main = () => {
                 fill="currentColor"
               />
             )}
-            <ClickMe>click here.</ClickMe>
+            <ClickMe> </ClickMe>
           </Center>
 
           {mq ? (
@@ -295,7 +305,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Work.
+                Work Experience.
               </motion.h2>
             </WORK>
           ) : (
@@ -312,7 +322,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Work.
+                Work Experience.
               </motion.h2>
             </WORK>
           )}

@@ -81,7 +81,7 @@ const Involvements = () => {
           <Container>
             <LogoComponent />
             <SocialIcons />
-            <BigTitle text="Involvements" top="5rem" left="5rem" />
+            {/* <BigTitle text="INVOLVEMENTS" top="10%" left="1%" /> */}
 
             <Center>
               <Grid variants={container} initial="hidden" animate="show">

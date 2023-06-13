@@ -9,12 +9,15 @@ const Text = styled.h1`
   left: ${(props) => props.left};
   right: ${(props) => props.right};
   color: ${(props) => `rgba(${props.theme.textRgba}, 0.1)`};
-  font-size: calc(3rem + 5vw);
+  font-size: calc(3rem + 5vw); /* Adjust the base and multiplier as needed */
   z-index: 0;
 
   @media (max-width: 600px) {
-    display: none;
-  }
+    top: 5%;
+    left: 10%;
+    padding: 0 1rem;
+    font-size: calc(1rem + 3vw); /* Adjust the base and multiplier as needed */
+s  }
 `;
 
 const BigTitle = (props) => {

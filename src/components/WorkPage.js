@@ -141,7 +141,7 @@ const WorkPage = () => {
         >
           <LogoComponent theme="dark" />
           <SocialIcons theme="dark" />
-          <BigTitle text="WORK" top="10%" right="20%" />
+          <BigTitle text="WORK EXPERIENCE" top="10%" left="10%" />
 
           <Main ref={ref} variants={container} initial="hidden" animate="show">
             {Work.map((d) => (
