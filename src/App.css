@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -30px; /* Spacing between columns */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* Spacing between columns */
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > div {
+  margin-bottom: 30px; /* Space between items */
+}

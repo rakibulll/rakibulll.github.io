@@ -8,13 +8,13 @@ const Text = styled.h1`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   right: ${(props) => props.right};
-  color: ${(props) => `rgba(${props.theme.textRgba}, 0.1)`};
+  color: ${(props) => `rgba(${props.theme.textRgba}, 0.7)`};
   font-size: calc(3rem + 5vw); /* Adjust the base and multiplier as needed */
   z-index: 0;
 
   @media (max-width: 600px) {
     top: 5%;
-    left: 10%;
+    left: 12.5%;
     padding: 0 1rem;
     font-size: calc(1rem + 3vw); /* Adjust the base and multiplier as needed */
 s  }

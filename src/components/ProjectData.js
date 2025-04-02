@@ -26,20 +26,20 @@ export const Project = [
         demo:"",
         github:"https://github.com/"
     },
-    {
-        id:4,
-        name:"CardinalHacks Website Development",
-        description:"Led the development of a website for CardinalHacks, a hackathon hosted by the Saginaw Valley State University.",
-        tags:["React","ChakraUI"],
+    // {
+    //     id:4,
+    //     name:"CardinalHacks Website Development",
+    //     description:"Led the development of a website for CardinalHacks, a hackathon hosted by the Saginaw Valley State University.",
+    //     tags:["React","ChakraUI"],
         
-        demo:"",
-        github:"https://cardinalhacks.com/"
-    },
+    //     demo:"",
+    //     github:"https://cardinalhacks.com/"
+    // },
     {
         id:5,
         name:"BitTorrent-like P2P Application ",
-        description:"Developed a Peer-to-peer application with implementing Multi-threading, Socket Programming and Serialization.",
-        tags:["java","multithreading","socket"],
+        description:"Developed a Peer-to-peer application with implementing Multi-threading, Socket Programming and TCP/IP.",
+        tags:["java","multithreading","socket","TCP/IP"],
         
         demo:"",
         github:"https://github.com/"
@@ -48,8 +48,8 @@ export const Project = [
     {
         id:6,
         name:"Interactive Portfolio Website",
-        description:"Developed dynamic website using React JS, with styledComponents and Framer Motion",
-        tags:["react","framerMotion","styledComponents"],
+        description:"Developed dynamic websites with React, enhanced by animations and integrated 3D models using Blender and Three.js.",
+        tags:["react","MaterialUI","Three.js","Blender"],
         
         demo:"",
         github:"https://github.com/"

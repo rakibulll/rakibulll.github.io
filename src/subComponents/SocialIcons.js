@@ -42,7 +42,7 @@ const Icons = styled.div`
 const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
-  background-color: #E0E1DD;
+  background-color: #A29881;
 `;
 const SocialIcons = (props) => {
   const mq = window.matchMedia("(max-width: 40em)").matches;

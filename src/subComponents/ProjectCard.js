@@ -9,8 +9,8 @@ import "@fontsource/press-start-2p"; // Defaults to weight 400.
 
 const Box = styled(motion.li)`
   width: 16rem;
-  height: 40vh;
-  background-color: #E0E1DD;
+  height: 35vh;
+  background-color: #A29881;
   color: ${(props) => props.theme.text};
   padding: 1.5rem 2rem;
   margin-right: 8rem;
@@ -18,15 +18,15 @@ const Box = styled(motion.li)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid ${(props) => props.theme.text};
+  border: 1px solid #A29881;
 
   transition: all 0.2s ease;
 
   @media screen and (min-width: 768px) {
     &:hover {
       background-color: ${(props) => props.theme.text};
-      color: white;
-      border: 3px solid white;
+      color: #A29881;
+      border: 3px solid #A29881;
     }
   }
 
@@ -67,52 +67,45 @@ const Box = styled(motion.li)`
 `;
 
 const Title = styled.h2`
-  font-size: calc(1em + 0.5vw);
-  font-family: "Karla";
+  font-size: 2rem;
+  font-family: "VT323", monospace;
 
+  ${mediaQueries(25)`font-size: 1.25rem;`}
+  ${mediaQueries(20)`font-size: 1.1rem;`}
 `;
+
 const Description = styled.h4`
-  font-size: calc(0.8em + 0.3vw);
+  font-size: 1.3rem;
+  font-family: "VT323", monospace;
+  font-weight: 400;
 
-  font-family: "Karla";
-  font-weight: 500;
-  ${mediaQueries(25)`
-  font-size:calc(0.7em + 0.3vw);
-
-
-
-  `};
-  ${mediaQueries(20)`
-  font-size:calc(0.6em + 0.3vw);
-
-
-
-  `};
+  ${mediaQueries(25)`font-size: 1rem;`}
+  ${mediaQueries(20)`font-size: 0.95rem;`}
 `;
-const Tags = styled.div`
-font-family: "Karla";
 
+
+
+const Tag = styled.span`
+  font-family: "VT323", monospace;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+
+  ${mediaQueries(25)`font-size: 0.9rem;`}
+  ${mediaQueries(20)`font-size: 0.85rem;`}
+`;
+
+const Tags = styled.div`
+  font-family: "VT323", monospace;
   border-top: 2px solid ${(props) => props.theme.text};
   padding-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     ${Box}:hover & {
       border-top: 2px solid ${(props) => props.theme.icon};
     }
   }
-`;
-const Tag = styled.span`
-font-family: "Karla";
-
-  margin-right: 1rem;
-  font-size: calc(0.8em + 0.3vw);
-
-  ${mediaQueries(25)`
-  font-size:calc(0.7em);
-
-
-  `};
 `;
 const Footer = styled.footer`
   display: flex;
@@ -126,7 +119,7 @@ const Git = styled(NavLink)`
   @media screen and (min-width: 768px) {
     ${Box}:hover & {
       & > * {
-        fill: white;
+        fill: #A29881;
       }
     }
   }
@@ -151,9 +144,9 @@ const Card = (props) => {
       </Tags>
       <Footer>
 
-        <Git to={{ pathname: `${github}` }} target="_blank">
+        {/* <Git to={{ pathname: `${github}` }} target="_blank">
           <Github width={60} height={60} fill={lightTheme.text} />
-        </Git>
+        </Git> */}
       </Footer>
     </Box>
   );

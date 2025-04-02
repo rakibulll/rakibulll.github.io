@@ -1,43 +1,110 @@
 import styled from "styled-components";
 import { mediaQueries } from "../components/Themes";
-import { NavLink } from "react-router-dom";
+import { useHistory, useLocation, NavLink } from "react-router-dom";
+import resumePDF from "../assets/files/Rakibul_Hassan-Resume.pdf";
 import "@fontsource/press-start-2p";
+
+
 
 const Logo = styled.h1`
   display: inline-block;
-  font-size:2em;
-
-  color: #E0E1DD;
+  font-size: 2rem;
+  color: #A29881;
   font-family: "Press Start 2P";
-  position: fixed;
-  left: 2rem;
-  top: 2rem;
-
-  z-index: 3;
 
   &:before {
     content: "rakibul.";
   }
 
   @media (max-width: 768px) {
+    font-size: 1.25rem; 
     &:before {
       content: "r\\a a\\a k\\a i\\a b\\a u\\a l\\a .";
       white-space: pre;
     }
   }
 
-  ${mediaQueries(40)`
-      font-size:1.5em;
-      left:1rem;
-      top:2rem;
+  ${mediaQueries(40)` 
+    font-size: 1.5rem;
+    left: 1rem;
   `};
 `;
 
-const LogoComponent = (props) => {
+const NavMenu = styled.nav`
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding-left: 0.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    gap: 0.5rem;
+  }
+`;
+
+
+
+const LogoComponent = () => {
+  const location = useLocation();
+  const history = useHistory();
+  const isHome = location.pathname === "/";
+
+  const NavItem = styled(NavLink)`
+  color: #7B846E;
+  font-family: "VT323", monospace;
+  font-size: ${isHome ? "1.4rem" : "2rem"};
+  text-decoration: none;
+
+  &:hover {
+    text-shadow: 0 0 2px #C0A973;
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${isHome ? "1.2rem" : "1.5rem"};
+    // display: ${isHome ? "block" : "none"};
+  }
+`;
+
+
+const Wrapper = styled.div`
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: ${isHome ? "row" : "column"};
+    align-items: flex-start;
+    gap: 1rem;
+  }
+`;
+
   return (
-    <NavLink to="/">
-      <Logo color={props.theme} />
-    </NavLink>
+    <Wrapper>
+      <NavLink to="/">
+        <Logo />
+      </NavLink>
+
+      {isHome ? (
+        <NavMenu>
+          {/* <NavItem to="/about">About</NavItem> */}
+          <NavItem to="/work">Work</NavItem>
+          <NavItem to="/Projects">Projects</NavItem>
+          <NavItem to="/Portfolio">Portfolio</NavItem>
+          <NavItem to="/involvements">Involvements</NavItem>
+          <NavItem as="a" href={resumePDF} target="_blank">Resume</NavItem>
+        </NavMenu>
+      ) : (
+        <NavMenu>
+          <NavItem to="/">&#11164;</NavItem>
+        </NavMenu>
+      )}
+    </Wrapper>
   );
 };
 

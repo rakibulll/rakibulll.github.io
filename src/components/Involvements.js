@@ -1,6 +1,7 @@
 import styled, { ThemeProvider } from 'styled-components'
 import { lazy, Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Masonry from 'react-masonry-css';
 
 import { Involvements as involvementsData} from "./InvolvementsData";
 
@@ -39,14 +40,20 @@ const Center = styled.div`
 `;
 
 const Grid = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
-  grid-gap: calc(1rem + 2vw);
+  column-count: 2;
+  column-gap: calc(1rem + 2vw);
+  margin: 0 auto;
 
   ${mediaQueries(50)`
-    grid-template-columns: 100%;
+    column-count: 1;
   `};
 `;
+
+const masonryBreakpoints = {
+  default: 2,  // Default to 2 columns
+  1024: 2,     // 2 columns for screens wider than 1024px
+  768: 1,      // 1 column for screens smaller than 768px
+};
 
 const container = {
   hidden: { opacity: 0 },
@@ -68,37 +75,32 @@ const Involvements = () => {
   }, []);
 
   const isMobile = window.innerWidth <= 768;
-
   return (
     <ThemeProvider theme={lightTheme}>
-      <Suspense fallback={<Loading />} >
-        <MainContainer 
-          variants={container}
-          initial="hidden"
-          animate="show"
-          exit={{ opacity: 0, transition: { duration: 0.5 } }}
-        >
-          <Container>
-            <LogoComponent />
-            <SocialIcons />
-            {/* <BigTitle text="INVOLVEMENTS" top="10%" left="1%" /> */}
+    <Suspense fallback={<Loading />} >
+      <MainContainer initial="hidden" animate="show" exit={{ opacity: 0, transition: { duration: 0.5 } }}>
+        <Container>
+          <LogoComponent backButtonVisible={true} />
+          <SocialIcons />
+          <BigTitle text="INVOLVEMENTS" top="10%" left="1%" />
 
-            <Center>
-              <Grid variants={container} initial="hidden" animate="show">
-                {involvementsData.map((involvements) => (
-                  <BlogComponent
-                    key={involvements.id}
-                    involvements={involvements}
-                    isMobile={isMobile}
-                  />
-                ))}
-              </Grid>
-            </Center>
-          </Container>
-        </MainContainer>
-      </Suspense>
-    </ThemeProvider>
-  );
+          <Center>
+            <Masonry
+              breakpointCols={masonryBreakpoints}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {involvementsData.map((involvement) => (
+                <BlogComponent key={involvement.id} involvements={involvement} />
+              ))}
+            </Masonry>
+          </Center>
+        </Container>
+      </MainContainer>
+    </Suspense>
+  </ThemeProvider>
+);
 };
+
 
 export default Involvements;
