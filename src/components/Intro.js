@@ -13,20 +13,20 @@ const Box = styled(motion.div)`
   background: linear-gradient(
       to right,
       ${(props) => props.theme.body} 50%,
-      ${(props) => props.theme.text} 50%
+      #171E18 50%
     )
     bottom,
     linear-gradient(
       to right,
       ${(props) => props.theme.body} 50%,
-      ${(props) => props.theme.text} 50%
+      #171E18 50%
     )
     top;
   background-repeat: no-repeat;
   background-size: 100% 6px;
 
   border-left: 6px solid ${(props) => props.theme.body};
-  border-right: 6px solid ${(props) => props.theme.text};
+  border-right: 6px solid #171E18;
 
   z-index: 1;
   position: absolute;
@@ -53,14 +53,14 @@ const Box = styled(motion.div)`
     background: none;
     border: none;
     border-top: 2px solid ${(props) => props.theme.body};
-    border-bottom: 2px solid ${(props) => props.theme.text};
+    border-bottom: 2px solid #171E18;
     background-image: linear-gradient(
         ${(props) => props.theme.body} 50%,
-        ${(props) => props.theme.text} 50%
+        #171E18 50%
       ),
       linear-gradient(
         ${(props) => props.theme.body} 50%,
-        ${(props) => props.theme.text} 50%
+        #171E18 50%
       );
     background-size: 2px 100%;
     background-position: 0 0, 100% 0;
@@ -76,6 +76,7 @@ const SubBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white
   position: relative;
 
   ${mediaQueries(50)`width: 100%; height: 50%;`}
@@ -87,14 +88,14 @@ const ProfileImage = styled.img`
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 50vh;
+  width: 80%;
+  height: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
 
-  ${mediaQueries(50)`width: 40%; bottom: 12%; height: auto;`}
-  ${mediaQueries(40)`width: 50%; height: auto;`}
+  ${mediaQueries(50)`width: 50%; bottom: 12%; height: auto;`}
+  ${mediaQueries(40)`width: 60%; height: auto;`}
   ${mediaQueries(30)`width: 70%; bottom: 8%; height: auto;`}
   ${mediaQueries(20)`width: 80%; height: auto;`}
 `;
@@ -104,11 +105,11 @@ const Text = styled(motion.div)`
   font-family: "VT323", monospace;
   font-size: 2.5em;
   color: #A29881;
-  padding: 2rem;
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: right;
+  text-align: left;
   gap: 1.5rem;
 
   h6 {
@@ -118,8 +119,8 @@ const Text = styled(motion.div)`
     margin-top: 1rem;
   }
 
-  ${mediaQueries(40)`font-size: 2.4em; padding: 1rem; h6 { font-size: 1.4rem; }`}
-  ${mediaQueries(20)`font-size: 2.2em; padding: 0.5rem; h6 { font-size: 1.3em; }`}
+  ${mediaQueries(40)`font-size: 2.4em; text-align: center; padding: 1rem; h6 { font-size: 1.4rem; }`}
+  ${mediaQueries(20)`font-size: 2.2em; text-align: center; padding: 0.5rem; h6 { font-size: 1.3em; }`}
 `;
 
 const Intro = () => {
@@ -129,6 +130,16 @@ const Intro = () => {
       animate={{ height: "auto", opacity: 1 }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
+
+      <SubBox >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+        >
+          <ProfileImage src={Me} alt="Rakibul's portrait" />
+        </motion.div>
+      </SubBox>
       <SubBox>
         <Text
           initial={{ opacity: 0, x: -40 }}
@@ -138,20 +149,13 @@ const Intro = () => {
           <h2>Hello World!</h2>
     
           <h6>
-            I'm Rakibul, a Computer Science graduate at the crossroads of innovation and code.
+              I'm <strong>Rakibul Hassan</strong>, a computer science enthusiast 
+              with a knack for code, collaboration, and creation.
           </h6>
         </Text>
       </SubBox>
 
-      <SubBox>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-        >
-          <ProfileImage src={Me} alt="Rakibul's portrait" />
-        </motion.div>
-      </SubBox>
+     
     </Box>
   );
 };

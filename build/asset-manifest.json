@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.58462fbc.css",
-    "main.js": "/static/js/main.41ad2a8d.js",
+    "main.js": "/static/js/main.c30a9ff7.js",
     "static/css/18.c95b3c74.chunk.css": "/static/css/18.c95b3c74.chunk.css",
-    "static/js/18.9c313c82.chunk.js": "/static/js/18.9c313c82.chunk.js",
+    "static/js/18.60a13988.chunk.js": "/static/js/18.60a13988.chunk.js",
     "static/css/923.7f07f392.chunk.css": "/static/css/923.7f07f392.chunk.css",
     "static/js/923.667c36c9.chunk.js": "/static/js/923.667c36c9.chunk.js",
     "static/css/833.81815356.chunk.css": "/static/css/833.81815356.chunk.css",
@@ -35,7 +35,7 @@
     "static/media/ezgif.com-video-to-gif (1).gif": "/static/media/ezgif.com-video-to-gif (1).67b658317b5d392c6c47.gif",
     "static/media/bensound-dreams.mp3": "/static/media/bensound-dreams.c705f4caf7fdb7d19b7d.mp3",
     "static/media/ezgif.com-video-to-gif.gif": "/static/media/ezgif.com-video-to-gif.29dc8eaf374f99d57a2a.gif",
-    "static/media/raki.png": "/static/media/raki.c5900dd5c0d212d63c1d.png",
+    "static/media/raki.png": "/static/media/raki.8a887925e804f05ba78c.png",
     "static/media/weatherapp.png": "/static/media/weatherapp.13082bbca59edae6aadd.png",
     "static/media/board.png": "/static/media/board.0135c4d86d02d1cd7254.png",
     "static/media/nasa-lunabotics.png": "/static/media/nasa-lunabotics.24b86ef8fdf0a89b49cb.png",
@@ -75,9 +75,9 @@
     "static/media/pixelify-sans-cyrillic-400-normal.woff2": "/static/media/pixelify-sans-cyrillic-400-normal.1c373fa344d126ddd067.woff2",
     "index.html": "/index.html",
     "main.58462fbc.css.map": "/static/css/main.58462fbc.css.map",
-    "main.41ad2a8d.js.map": "/static/js/main.41ad2a8d.js.map",
+    "main.c30a9ff7.js.map": "/static/js/main.c30a9ff7.js.map",
     "18.c95b3c74.chunk.css.map": "/static/css/18.c95b3c74.chunk.css.map",
-    "18.9c313c82.chunk.js.map": "/static/js/18.9c313c82.chunk.js.map",
+    "18.60a13988.chunk.js.map": "/static/js/18.60a13988.chunk.js.map",
     "923.7f07f392.chunk.css.map": "/static/css/923.7f07f392.chunk.css.map",
     "923.667c36c9.chunk.js.map": "/static/js/923.667c36c9.chunk.js.map",
     "833.81815356.chunk.css.map": "/static/css/833.81815356.chunk.css.map",
@@ -108,6 +108,6 @@
   },
   "entrypoints": [
     "static/css/main.58462fbc.css",
-    "static/js/main.41ad2a8d.js"
+    "static/js/main.c30a9ff7.js"
   ]
 }
