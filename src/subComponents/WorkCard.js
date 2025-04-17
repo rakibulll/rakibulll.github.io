@@ -5,7 +5,7 @@ import { mediaQueries } from "../components/Themes";
 import React from "react";
 
 const Box = styled(motion.li)`
-  width: 21rem;
+  width: 23rem;
   min-height: 50vh;
   background-color: #a29881;
   color: ${(props) => props.theme.text};
